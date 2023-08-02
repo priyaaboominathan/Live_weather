@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <title>Weather Forecast</title>
+  </head>
+  <body>
+    <div class="after">
+      <div class="head">
+        <h1>LIVE WEATHER</h1>
+        <p>Stepping out?? Oh wait, It's time to do a weather check</p>
+      </div>
+      <div id="form">
+        <form action="/" method="post">
+          <input
+            type="text"
+            id="searchbox"
+            name="cityName"
+            placeholder="Enter city name"
+          />
+          <button id="searchbtn" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="place box">
+        <div class="city"><%= place %></div>
+        <div class="time"><%= date %></div>
+      </div>
+
+      <div class="image box">
+        <div class="i">
+          <img src=<%= iconurl %> height="100px" alt="">
+        </div>
+        <div class="desc"><%= desc %></div>
+      </div>
+      <div class="temp box">
+        <div><%= temp %></div>
+        <div style="font-size: 23px;">temp</div>
+    </div>
+    </div>
+    <div class="container">
+      <div class="data">
+        <div class="label">Wind</div>
+        <div class="icon">
+          <img src="/CSS/icons/Wind.png" height="60px" alt="" />
+        </div>
+        <div class="dat"><%= wind %></div>
+      </div>
+      <div class="data">
+        <div class="label">Humidity</div>
+        <div class="icon">
+          <img src="/CSS/icons/Humidity.png" height="60px" alt="" />
+        </div>
+        <div class="dat"><%= humidity %></div>
+      </div>
+      <div class="data">
+        <div class="label">Pressure</div>
+        <div class="icon">
+          <img src="/CSS/icons/Pressure.png" height="60px" alt="" />
+        </div>
+        <div class="dat"><%= pressure %></div>
+      </div>
+      <div class="data cloud">
+        <div class="label">Clouds</div>
+        <div class="icon">
+          <img src="/CSS/icons/Cloud.png" height="45px" alt="" />
+        </div>
+        <div class="dat"><%= cloudy %></div>
+      </div>
+    </div>
+  </body>
+</html>
